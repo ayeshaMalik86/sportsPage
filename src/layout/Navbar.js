@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="absolute top-0 left-0 w-full z-10 bg-transparent font-mona">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="text-xl text-black flex items-center gap-2 bg-white rounded-full px-2 py-2">
+          <div className="text-lg text-black flex items-center gap-2 bg-white rounded-full px-2 py-2">
             <div className="bg-[#FEBB02] p-2 rounded-full flex items-center justify-center">
               <img
                 src="/assets/icons/logo.png"
