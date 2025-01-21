@@ -65,8 +65,9 @@ const About = () => {
             whileHover={{ scale: 1.5 }}
           /> training at over
           <motion.span
-            className="bg-[#FFBB01] text-black px-2 py-1 rounded-full mx-1 inline-block text-[20px] transform"
-            whileHover={{ rotate: -10, scale: 1.2 }}
+            className="bg-[#FFBB01] text-black px-2 py-1 rounded-full mx-1 inline-block text-[20px] transform rotate-[-10deg]"
+            whileHover={{ rotate:0, scale: 1.2 }}
+            animate={{ rotate: -10 }}
           >
             <img
               src="assets/icons/baseball.png"
