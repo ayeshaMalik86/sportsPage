@@ -2,7 +2,7 @@ import React from "react";
 
 const BaseballTraining = () => {
   return (
-    <div className="font-mona relative flex flex-col text-center p-8 bg-white">
+    <div className="font-mona relative border-w-[80%] flex flex-col text-center p-2 bg-white">
       <div className="z-10 flex p-6 justify-between">
         <div className="flex items-center">
           <div className="w-10 h-10 bg-black text-[#FFBB01] flex items-center justify-center rounded-full text-sm">01</div>
@@ -14,7 +14,7 @@ const BaseballTraining = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-3xl mt-20 flex flex-col self-center text-center relative">
+      <div className="max-w-3xl mt-[10rem] md:mt-[5rem] flex flex-col self-center text-center relative">
         <div className="inset-0 transform -rotate-6 z-0 flex -top-32">
           <img
             src="assets/images/twobb.png"
@@ -27,19 +27,19 @@ const BaseballTraining = () => {
             }}
           />
         </div>
-        <p className="text-3xl text-gray-900 relative z-10 px-6 py-4">
+        <p className="text-2xl md:text-3xl text-gray-900 relative z-10 px-6 py-4">
           We provide exceptional baseball <img src="/assets/icons/batter.png" alt="batter" className="w-10 inline-block" /> training at over
           <span className="bg-[#FFBB01] text-black px-2 py-1 rounded-full mx-1 inline-block text-[20px] transform -rotate-6">
             <img src="assets/icons/baseball.png" alt="baseball" className="w-5 inline-block bg-white rounded-full p-1" /> 100+
           </span> locations, catering to players of all skill levels. From cutting-edge facilities in <span className="bg-[#FFBB01] rounded-full px-5 pb-1">
             <img src="assets/icons/baseball.png" alt="baseball" className="w-6 inline-block" />
           </span> bustling cities to picturesque fields in serene settings to create the
-          <span className="text-[#FFBB01]"> perfect environment for honing your skills and enjoying the game you love</span>
+          <span className="text-[#FFBB01]"> perfect environment for honing your skills and enjoying the game you love</span>.
         </p>
       </div>
 
       {/* Footer */}
-      <div className="mt-8 flex self-center items-center">
+      <div className="mt-8 mb-8 flex self-center items-center">
         <div className="flex items-center justify-center space-x-2">
           <div className="relative flex items-center">
             <div className="absolute w-16 h-px -right-4 bg-[#FFBB01] transform -translate-x-1/2"></div>
@@ -58,6 +58,7 @@ const BaseballTraining = () => {
           </div>
         </div>
       </div>
+      <div className='flex self-center w-[90%] border-b-2 mb-10 mt-10'></div>
     </div>
   );
 };
