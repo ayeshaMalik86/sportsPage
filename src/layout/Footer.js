@@ -17,13 +17,13 @@ const Footer = () => {
           </div>
       
       {/* Main Text */}
-      <div className="flex items-center justify-between mt-20 max-w-5xl">
+      <div className="flex flex-wrap items-center justify-between mt-20 max-w-5xl">
         <p className="text-4xl">We’re dedicated to<br/> empowering baseball players<br/> of all skill levels.</p>
         <div className="p-2 rounded-lg">
         <img 
           src="/assets/images/footer-img.png" 
           alt="Baseball Equipment" 
-          className="w-48 object-cover rounded-lg"
+          className="hidden md:block w-48 object-cover rounded-lg"
         />
       </div>
       </div>
@@ -39,7 +39,7 @@ const Footer = () => {
       
       
       {/* Navigation Buttons */}
-      <div className="mt-6 flex flex-col md:flex-row items-center justify-between">
+      <div className="mt-6 flex flex-col md:flex-row md:items-center justify-between">
         <p className="text-xs text-gray-400">© 2025 Slugger All Rights Reserved</p>
         <div className="flex flex-wrap mt-10 md:mt-2 gap-4">
         {['Home', 'Programs', 'Coaches', 'Schedule'].map((item) => (
