@@ -40,17 +40,25 @@ const Programs = () => {
         </div>
 
         {/* Slugger Squad */}
-        <div className="relative w-[15rem] h-[10rem] flex-shrink-0 flex flex-col justify-between gap-3 p-4 border-2 border-gray-100 rounded-xl">
-          <div className="rounded-lg flex justify-between">
-            <span className="text-xl border-2 self-center px-3 py-1 rounded-full">+</span>
-            <img 
-              src="/assets/images/player1.jpg" 
-              alt="Slugger Squad" 
-              className="w-[5rem] h-20 object-cover rounded-lg" 
-            />
-          </div>
-          <span className="text-xl self-start">Slugger Squad</span>
-        </div>
+        <div className="relative w-[15rem] h-[10rem] flex-shrink-0 flex flex-col justify-between gap-3 p-4 border-2 border-gray-100 rounded-xl bg-white overflow-hidden">
+  {/* Background Image */}
+  <div 
+    className="absolute z-0 -bottom-5 -left-5 rotate-[15deg] w-24 h-24 bg-contain bg-no-repeat" 
+    style={{ backgroundImage: "url('/assets/images/baseball.png')" }}
+  ></div>
+
+  {/* Content */}
+  <div className="z-10 rounded-lg flex justify-between">
+    <span className="text-xl border-2 self-center px-3 py-1 rounded-full">+</span>
+    <img 
+      src="/assets/images/player1.jpg" 
+      alt="Slugger Squad" 
+      className="w-[5rem] h-20 object-cover rounded-lg" 
+    />
+  </div>
+  <span className="z-10 text-xl self-start">Slugger Squad</span>
+</div>
+
 
         {/* MVP Grind */}
         <div className="relative w-[15rem] flex-shrink-0 flex flex-col">
@@ -78,7 +86,7 @@ const Programs = () => {
           </div>
         </div>
       </div>
-      <div className='flex self-center w-[90%] border-b-2 mb-20 mt-10'></div>
+      <div className='flex self-center w-[90%] border-b-2 mb-10 mt-10'></div>
     </div>
     
   );
