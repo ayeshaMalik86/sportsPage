@@ -1,6 +1,6 @@
 import React from "react";
 
-const BaseballTraining = () => {
+const About = () => {
   return (
     <div className="font-mona relative border-w-[80%] flex flex-col text-center p-2 bg-white">
       <div className="z-10 flex p-6 justify-between">
@@ -63,4 +63,4 @@ const BaseballTraining = () => {
   );
 };
 
-export default BaseballTraining;
+export default About;
