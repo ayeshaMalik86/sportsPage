@@ -7,7 +7,7 @@ import Footer from './layout/Footer';
 
 function App() {
   return (
-    <div>
+    <div className='p-3'>
       <Navbar/>
       <Main/>
       <Footer/>

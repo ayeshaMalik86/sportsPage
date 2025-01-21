@@ -6,7 +6,7 @@ import About from '../components/About'
 
 const Main = () => {
   return (
-    <div>
+    <div className='rounded-full'>
       <HeroSection/>
       <About/>
       <Programs/>

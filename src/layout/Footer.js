@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white p-8 relative w-full mx-auto font-mona">
+    <div className="bg-black rounded-3xl text-white p-8 relative w-full mx-auto font-mona">
         <div className="border-t flex mt-10 mb-10 border-gray-700"></div>
       {/* Logo */}
       <div className="text-lg text-black inline-flex items-center gap-2 bg-white rounded-full px-2 py-2">
@@ -18,7 +18,7 @@ const Footer = () => {
       
       {/* Main Text */}
       <div className="flex flex-wrap items-center justify-between mt-20 max-w-5xl">
-        <p className="text-4xl">We’re dedicated to<br/> empowering baseball players<br/> of all skill levels.</p>
+        <p className="text-2xl md:text-4xl">We’re dedicated to<br/> empowering baseball players<br/> of all skill levels.</p>
         <div className="p-2 rounded-lg">
         <img 
           src="/assets/images/footer-img.png" 
