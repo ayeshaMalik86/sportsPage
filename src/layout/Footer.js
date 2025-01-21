@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       
       {/* Contact Info */}
-      <div className="mt-8 flex flex-col md:flex-row justify-between text-xl text-gray-400 border-t border-gray-700 pt-4">
+      <div className="mt-8 flex flex-col md:flex-row justify-between md:text-xl  text-gray-400 border-t border-gray-700 pt-4">
         <p>123 Baseball Lane, Sports City, USA</p>
         <p>+1 (555) 123-4567</p>
         <p>info@sluggeracademy.com</p>
@@ -39,9 +39,9 @@ const Footer = () => {
       
       
       {/* Navigation Buttons */}
-      <div className="mt-6 flex items-center justify-between">
+      <div className="mt-6 flex flex-col md:flex-row items-center justify-between">
         <p className="text-xs text-gray-400">© 2025 Slugger All Rights Reserved</p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap mt-10 md:mt-2 gap-4">
         {['Home', 'Programs', 'Coaches', 'Schedule'].map((item) => (
           <button key={item} className="border border-gray-500 px-4 py-2 rounded-full hover:bg-gray-800">{item}</button>
         ))}
