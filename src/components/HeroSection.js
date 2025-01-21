@@ -49,7 +49,7 @@ const Hero = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="md:mt-10 items-left px-6 md:px-12 text-white"
+        className="mt-7 md:mt-10 items-left px-6 md:px-12 text-white"
       >
         <motion.h1 
           initial={{ scale: 0.8, opacity: 0 }}
