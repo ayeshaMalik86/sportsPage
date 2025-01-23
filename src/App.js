@@ -1,16 +1,15 @@
+// App.js
 import './App.css';
-import Main from './pages/Main';
-import Navbar from './layout/Navbar';
 import './index.css';
-import Footer from './layout/Footer';
-
+import Main from './pages/Main';
+import Layout from './layout/Layout';
 
 function App() {
   return (
     <div className='p-3'>
-      <Navbar/>
-      <Main/>
-      <Footer/>
+      <Layout>
+        <Main />
+      </Layout>
     </div>
   );
 }
