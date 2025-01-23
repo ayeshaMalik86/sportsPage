@@ -122,7 +122,7 @@ const Navbar = () => {
 
               <motion.button 
                 whileHover={{ scale: 1.1, backgroundColor: "#FFBB01" }}
-                className="w-full text-black flex gap-2 items-center bg-white pr-1 pl-2 py-2 rounded-full mt-4"
+                className="w-full text-black flex gap-2 items-center bg-white pr-1 md:pl-2 py-2 rounded-full mt-4"
               >
                 Free Trial
                 <motion.div

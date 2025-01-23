@@ -154,6 +154,7 @@ const Schedule = () => {
           ))}
         </motion.div>
       </div>
+      <motion.div className='flex self-center w-[90%] border-b-2 mb-5 mt-20' initial={{ width: 0 }} animate={{ width: '90%' }} transition={{ duration: 1 }}></motion.div>
     </motion.div>
   );
 };
