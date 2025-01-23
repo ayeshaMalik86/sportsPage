@@ -36,8 +36,19 @@ const Schedule = () => {
   ];
 
   return (
-    <div className="p-6 md:p-12 bg-white text-black font-mona">
-      <div className="flex items-center">
+    <motion.div 
+      className="p-6 md:p-12 bg-white text-black font-mona"
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      <motion.div
+        className="flex items-center"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
         <motion.div
           className="w-10 h-10 bg-black text-[#FFBB01] flex items-center justify-center rounded-full text-sm"
           whileHover={{ scale: 1.2, rotate: 15 }}
@@ -50,92 +61,100 @@ const Schedule = () => {
         >
           Schedule
         </motion.span>
-      </div>
+      </motion.div>
 
-      {/* Left Section */}
       <div className="flex flex-col md:flex-row gap-20 justify-between items-center">
-        <div className="md:w-[50%]">
+        <motion.div 
+          className="md:w-[50%]"
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
           <h1 className="text-5xl mt-10">
             <span className="text-[#FEBB02]">Game On:<br /></span> Upcoming Match Schedule
           </h1>
-          <p className="text-gray-500 mt-10">
+          <motion.p 
+            className="text-gray-500 mt-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             Don’t miss a single inning! Check out our upcoming matches to stay updated on game times, locations, and opponents.
-          </p>
-          <div className="mt-10">
+          </motion.p>
+          <motion.div 
+            className="mt-10"
+            whileHover={{ scale: 1.05 }}
+          >
             <img
               src="/assets/images/schedule-img.jpg"
               alt="Lacrosse Match"
               className="w-full rounded-lg shadow-lg"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Right Section */}
-        <div className="w-[100%] md:w-[50%] space-y-6">
+        <motion.div 
+          className="w-[100%] md:w-[50%] space-y-6"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <hr className="my-4 border-gray-300" />
           {events.map((event, index) => (
-            <div key={index}>
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
               <div className="p-4 rounded-lg">
                 <div
                   className="flex justify-between items-center cursor-pointer"
                   onClick={() => toggleDropdown(index)}
                 >
-                  <h2 className="text-2xl flex items-center gap-5">
+                  <motion.h2 className="text-2xl flex items-center gap-5" whileHover={{ scale: 1.05 }}>
                     <span className="text-gray-400 text-sm">{`0${index + 1}.`}</span> {event.title}
-                  </h2>
-                  <span
+                  </motion.h2>
+                  <motion.span
                     className={`rounded-full py-2 px-4 ${activeIndex !== index ? 'bg-gray-100' : 'bg-transparent'}`}
+                    whileHover={{ scale: 1.2 }}
                   >
                     {activeIndex === index ? "" : ">"}
-                  </span>
+                  </motion.span>
                 </div>
 
                 {activeIndex === index && (
-                  <div className="mt-10 flex gap-4 items-start">
+                  <motion.div 
+                    className="mt-10 flex gap-4 items-start"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <div>
                       <p className="text-gray-500">{event.description}</p>
-                      <button className="mt-6 px-4 py-2 border border-black rounded-full hover:bg-[#FEBB02] hover:border-none hover:text-white transition">
+                      <motion.button
+                        className="mt-6 px-4 py-2 border border-black rounded-full hover:bg-[#FEBB02] hover:border-none hover:text-white transition"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
                         View Details
-                      </button>
+                      </motion.button>
                     </div>
-                    <img
+                    <motion.img
+                      whileHover={{ scale: 1.05 }}
                       src={event.img}
                       alt={event.title}
                       className="w-36 h-36 object-cover rounded-lg shadow-md"
                     />
-                  </div>
+                  </motion.div>
                 )}
               </div>
               <hr className="my-4 border-gray-300" />
-            </div>
+            </motion.div>
           ))}
-
-          <div className="flex justify-end">
-            <motion.a 
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              href="#" 
-              className="bg-black text-white flex px-3 py-2 rounded-full text-lg items-center space-x-2 hover:bg-[#FFBB01]"
-            >
-              <span>Join us</span>
-              <motion.img 
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.5 }}
-                src="assets/icons/right-up.png" alt="arrow" 
-                className="w-10 h-10 bg-white pr-1 pl-2 py-2 rounded-full"
-              />
-            </motion.a>
-          </div>
-
-        </div>
+        </motion.div>
       </div>
-      <motion.div
-        className="flex self-center w-[90%] border-b-2 mb-10 mt-20"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 1, delay: 0.8 }}
-      ></motion.div>
-    </div>
+    </motion.div>
   );
 };
 
