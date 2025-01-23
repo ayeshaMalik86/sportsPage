@@ -69,7 +69,7 @@ const Hero = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             href="#" 
-            className="bg-black text-white inline-flex px-3 py-2 rounded-full text-lg flex items-center space-x-2 hover:bg-[#FFBB01]"
+            className="bg-black text-white inline-flex px-3 py-2 rounded-full text-lg items-center space-x-2 hover:bg-[#FFBB01]"
           >
             <span>Join us</span>
             <motion.img 
@@ -80,7 +80,7 @@ const Hero = () => {
             />
           </motion.a>
           <motion.div 
-            className="hidden text-white text-sm md:flex items-center gap-3"
+            className="hidden text-white text-sm md:flex items-center gap-3 cursor-pointer"
             animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
           >

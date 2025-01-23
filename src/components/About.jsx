@@ -5,11 +5,12 @@ const About = () => {
   return (
     <motion.div
       className="font-mona relative border-w-[80%] flex flex-col text-center p-2 bg-white"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }} 
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      {/* Header Section */}
+   
       <motion.div
         className="z-10 flex p-6 justify-between"
         initial={{ y: -50, opacity: 0 }}
@@ -29,12 +30,14 @@ const About = () => {
           >
             About
           </motion.span>
-        </div >
+        </div>
         <motion.div
           className="text-black text-md flex items-center"
           whileHover={{ x: 10 }}
         >
-          <button className="hover:bg-[#FFBB01] rounded-full px-2">Learn more <span className="ml-1">&#8599;</span></button>
+          <button className="hover:bg-[#FFBB01] rounded-full px-2">
+            Learn more <span className="ml-1">&#8599;</span>
+          </button>
         </motion.div>
       </motion.div>
 
@@ -58,15 +61,17 @@ const About = () => {
           />
         </motion.div>
         <p className="text-2xl md:text-3xl text-gray-900 relative z-10 px-6 py-4">
-          We provide exceptional baseball <motion.img
+          We provide exceptional baseball{" "}
+          <motion.img
             src="/assets/icons/batter.png"
             alt="batter"
             className="w-10 inline-block"
             whileHover={{ scale: 1.5 }}
-          /> training at over
+          />{" "}
+          training at over
           <motion.span
             className="bg-[#FFBB01] text-black px-2 py-1 rounded-full mx-1 inline-block text-[20px] transform rotate-[-10deg]"
-            whileHover={{ rotate:0, scale: 1.2 }}
+            whileHover={{ rotate: 0, scale: 1.2 }}
             animate={{ rotate: -10 }}
           >
             <img
@@ -77,16 +82,27 @@ const About = () => {
             100+
           </motion.span>
           locations, catering to players of all skill levels. From cutting-edge
-          facilities in <motion.span
-          className="bg-[#FFBB01] rounded-full px-3 py-1 inline-flex"
+          facilities in{" "}
+          <motion.span
+            className="bg-[#FFBB01] rounded-full px-3 py-1 inline-flex"
             whileHover={{ scale: 1.4, color: "#FF8800" }}
-            >
-            <img src="assets/icons/baseball.png" alt="baseball" className="w-6 inline-block" />
-          </motion.span> bustling cities to picturesque fields in serene settings to create the<motion.span
+          >
+            <img
+              src="assets/icons/baseball.png"
+              alt="baseball"
+              className="w-6 inline-block"
+            />
+          </motion.span>{" "}
+          bustling cities to picturesque fields in serene settings to create the
+          <motion.span
             className="text-[#FFBB01]"
             whileHover={{ scale: 1.2, color: "#FF8800" }}
-          > perfect environment for honing your skills and enjoying the game you love
-          </motion.span>.
+          >
+            {" "}
+            perfect environment for honing your skills and enjoying the game you
+            love
+          </motion.span>
+          .
         </p>
       </motion.div>
 

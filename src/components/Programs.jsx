@@ -15,10 +15,12 @@ const Programs = () => {
     <motion.div
       className="bg-white font-mona p-2 flex flex-col gap-6"
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      whileHover="hover"
+      viewport={{ once: true }}
       variants={stagger}
     >
-      {/* Header */}
+
       <motion.div className="md:flex p-8 justify-between" variants={fadeIn}>
         <div className="flex items-center">
           <motion.div
@@ -39,9 +41,9 @@ const Programs = () => {
         </motion.div>
       </motion.div>
 
-      {/* Courses */}
+
       <motion.div className="flex gap-6 self-center justify-evenly flex-wrap" variants={stagger}>
-        {/* Rookie Ready */}
+
         <motion.div
           className="relative h-[80%] max-w-[100%] rounded-xl overflow-hidden flex-shrink-0"
           whileHover={{ scale: 1.05 }}
@@ -66,7 +68,6 @@ const Programs = () => {
           </motion.div>
         </motion.div>
 
-        {/* Slugger Squad */}
         <motion.div
           className="relative w-[15rem] h-[10rem] flex-shrink-0 flex flex-col justify-between gap-3 p-4 border-2 border-gray-100 rounded-xl bg-white overflow-hidden"
           whileHover={{ scale: 1.05 }}
@@ -80,7 +81,6 @@ const Programs = () => {
           <span className="z-10 text-xl self-start">Slugger Squad</span>
         </motion.div>
 
-        {/* MVP Grind */}
         <motion.div className="relative w-[15rem] flex-shrink-0 flex flex-col" variants={fadeIn}>
           <motion.div className="relative w-full h-44 rounded-xl overflow-hidden" whileHover={{ scale: 1.05 }}>
             <img src="/assets/images/mvp-grind.jpg" alt="MVP Grind" className="object-cover w-full h-full" />
@@ -94,13 +94,14 @@ const Programs = () => {
               <motion.button className="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center" whileHover={{ scale: 1.2 }}>←</motion.button>
               <motion.button className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center" whileHover={{ scale: 1.2 }}>→</motion.button>
             </div>
-            <div className="text-gray-400 mt-20">
+            <motion.div className="text-gray-400 mt-20"
+            whileHover={{ scale: 1.05 }}>
               Discover the ideal program tailored to your unique goals, skill level, and aspirations, ensuring the perfect fit for your baseball journey.
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>
-      <motion.div className='flex self-center w-[90%] border-b-2 mb-10 mt-10' initial={{ width: 0 }} animate={{ width: '90%' }} transition={{ duration: 1 }}></motion.div>
+      <motion.div className='flex self-center w-[90%] border-b-2 mb-5 mt-10' initial={{ width: 0 }} animate={{ width: '90%' }} transition={{ duration: 1 }}></motion.div>
     </motion.div>
   );
 };

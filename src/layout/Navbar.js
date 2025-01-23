@@ -69,6 +69,15 @@ const Navbar = () => {
                 <a href={`#${item.toLowerCase()}`}>{item}</a>
               </motion.li>
             ))}
+            <motion.li 
+              whileHover={{ scale: 1.1, color: "#FFBB01" }}
+              className="bg-white rounded-full items-center flex px-3">
+              <img
+                src="/assets/icons/search.png"
+                alt="search logo"
+                className="w-5 h-5"
+              />
+            </motion.li>
           </motion.ul>
 
           <motion.button 
@@ -76,15 +85,17 @@ const Navbar = () => {
             className="hidden md:flex text-black gap-2 items-center bg-white pr-1 pl-3 py-1 rounded-full"
           >
             Free Trial
-            <motion.div
+            <div
               className="bg-black p-2 rounded-full flex items-center justify-center"
             >
-              <img
+              <motion.img
+               whileHover={{ rotate: 360 }}
+               transition={{ duration: 0.5 }}
                 src="/assets/icons/arrow.png"
                 alt="arrow logo"
                 className="w-5 h-5"
               />
-            </motion.div>
+            </div>
           </motion.button>
         </motion.div>
 

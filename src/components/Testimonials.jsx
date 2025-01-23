@@ -67,8 +67,12 @@ const Testimonials = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="w-10 h-10 bg-black text-[#FFBB01] flex items-center justify-center rounded-full text-sm">03</div>
-        <span className="text-black bg-[#F1F1F1] px-3 py-2 rounded-full">Testimonials</span>
+        <motion.div className="w-10 h-10 bg-black text-[#FFBB01] flex items-center justify-center rounded-full text-sm"
+        whileHover={{ scale: 1.1 }}>04
+        </motion.div>
+        <motion.span className="text-black bg-[#F1F1F1] px-3 py-2 rounded-full"
+        whileHover={{ scale: 1.1 }}
+        >Testimonials</motion.span>
       </motion.div>
       <div className="flex flex-col md:flex-row items-center">
         <motion.div 
@@ -78,7 +82,7 @@ const Testimonials = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <img src="/assets/images/player1.jpg" alt="" className="w-28 h-28 rounded-lg"/>
-          <h2 className="text-4xl text-gray-900 mt-20 mb-10">From Our Baseball Community</h2>
+          <motion.h2 className="text-4xl text-gray-900 mt-20 mb-10" whileHover={{ scale: 1.05 }}>From Our Baseball Community</motion.h2>
           <div className="flex gap-2">
             <motion.button 
               className="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center"
