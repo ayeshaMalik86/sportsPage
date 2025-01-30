@@ -6,6 +6,7 @@ import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import Schedule from '../components/Schedule';
 import JoinUs from '../components/JoinUs'
+import ShowModel from '../components/ShowModel';
 
 const Main = () => {
   return (
@@ -16,6 +17,7 @@ const Main = () => {
       <Schedule />
       <Testimonials />
       <JoinUs/>
+      <ShowModel/>
     </div>
   );
 };
