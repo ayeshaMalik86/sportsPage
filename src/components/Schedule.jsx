@@ -113,7 +113,7 @@ const Schedule = () => {
                   onClick={() => toggleDropdown(index)}
                 >
                   <motion.h2 className="text-2xl flex items-center gap-5" whileHover={{ scale: 1.05 }}>
-                    <span className="text-gray-400 text-sm">{`0${index + 1}.`}</span> {event.title}
+                    <span className="text-gray-400 text-xs md:text-sm ">{`0${index + 1}.`}</span> {event.title}
                   </motion.h2>
                   <motion.span
                     className={`rounded-full py-2 px-4 ${activeIndex !== index ? 'bg-gray-100' : 'bg-transparent'}`}

@@ -10,7 +10,7 @@ import ShowModel from '../components/ShowModel';
 
 const Main = () => {
   return (
-    <div className='main-content'>
+    <div className='main-content max-w-full mx-auto'>
       <HeroSection />
       <About />
       <Programs />
